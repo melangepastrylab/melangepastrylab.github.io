@@ -1,4 +1,6 @@
-var main = function() {
+debugger;
+
+var majijkin = function() {
     $('.dropdown-toggle').click(function() {
         $('.dropdown-menu').toggle();
     });

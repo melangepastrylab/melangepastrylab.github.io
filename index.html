@@ -148,6 +148,7 @@ title: current collection
       <option value="2015-02-08">Saturday, February 8</option>
       <option value="2015-02-09">Saturday, February 9</option>
     </select>
+    Join mailing list? <input type="checkbox" id="mailingList" name="mailingList">
 
 <form action="https://melange-checkout.herokuapp.com/" method="POST">
     <script
@@ -167,8 +168,7 @@ var updateMetadata = function() {
   var metadata = {};
   metadata.fullName = $.trim($('#fullName').val());
   metadata.pickupDate = $('#pickupDate').val();
-
-  console.log(metadata.pickupDate);
+  metadata.mailingList = $('#mailingList').prop('checked');
 
   if (metadata.fullName.length > 0
      && metadata.pickupDate !== "NotEntered") {
@@ -189,6 +189,7 @@ var updateMetadata = function() {
 
 $('#fullName').keyup(updateMetadata);
 $('#pickupDate').change(updateMetadata);
+$('#mailingList').change(updateMetadata);
 </script>
 </form>
 </p>

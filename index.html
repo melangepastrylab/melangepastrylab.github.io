@@ -142,6 +142,7 @@ title: current collection
     Full Name (required) <input id="fullName" name="fullName" value="">
     Pickup date (required) 
     <select id="pickupDate">
+      <option value="NotEntered" selected="selected">-- choose option --</option>
       <option value="2015-02-06">Friday, February 6</option>
       <option value="2015-02-07">Saturday, February 7</option>
       <option value="2015-02-08">Saturday, February 8</option>
@@ -163,14 +164,30 @@ title: current collection
     <input name="metadata" value="{}" type="hidden">
 <script>
 var updateMetadata = function() {
-var metadata = {};
-metadata.fullName = $('#fullName').val();
-metadata.pickupDate = $('#pickupDate').val();
-var stringified = JSON.stringify(metadata);
-$('input[name=metadata]').val(stringified);
+  var metadata = {};
+  metadata.fullName = $.trim($('#fullName').val());
+  metadata.pickupDate = $('#pickupDate').val();
+
+  console.log(metadata.pickupDate);
+
+  if (metadata.fullName.length > 0
+     && metadata.pickupDate !== "NotEntered") {
+
+    // set metadata
+    var stringified = JSON.stringify(metadata);
+    $('input[name=metadata]').val(stringified);
+
+    // re-enable submit button
+    $('.stripe-button-el').prop('disabled', false);
+  } else if (metadata.fullName.length === 0
+      || metadata.pickupDate === "NotEntered") {
+    // disable submit button
+    $('.stripe-button-el').prop('disabled', true);
   }
 
-$('#fullName').change(updateMetadata);
+}
+
+$('#fullName').keyup(updateMetadata);
 $('#pickupDate').change(updateMetadata);
 </script>
 </form>

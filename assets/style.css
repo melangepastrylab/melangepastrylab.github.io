@@ -3,3 +3,7 @@
 .bodyRow {
   max-width: 740px;
 }
+
+.orderInput {
+  margin-bottom: 10px;
+}

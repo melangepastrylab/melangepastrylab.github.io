@@ -2,155 +2,93 @@
 layout: default
 title: current collection
 ---
-<p>
-	i (spring 2015): a taste of macarons
-</p>
+<h1>i (spring 2015): a taste of macarons</h1>
 
-<p>
-	some picture
-</p>
+<div id="collection-carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#collection-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#collection-carousel" data-slide-to="1"></li>
+    <li data-target="#collection-carousel" data-slide-to="2"></li>
+    <li data-target="#collection-carousel" data-slide-to="3"></li>
+    <li data-target="#collection-carousel" data-slide-to="4"></li>
+    <!--<li data-target="#collection-carousel" data-slide-to="5"></li>-->
+  </ol>
 
-<div class="slider">
-      <div class="slide active-slide">
-        <div class="container">
-          <div class="row">
-          	<div class="slide-copy col-xs-5">
-              <p>6 macarons of varying flavors</p>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="assets/spring2015_all.jpg" width="400px">
-            </div>
-          </div>
-        </div>      
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <!-- TODO current _all.jpg is strange size -->
+    <!--
+    <div class="item active">
+      <img src="assets/spring2015_all.jpg" alt="Six flavors">
+      <div class="carousel-caption">
+        6 macarons of varying flavors
       </div>
-
-      <div class="slide">
-        <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <p>chocolate</p>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="assets/spring2015_choc.jpg" width="400px">
-            </div>
-          </div>
-        </div>
+    </div>
+    -->
+    <div class="item active">
+      <img src="assets/spring2015_choc.jpg" alt="Chocolate">
+      <div class="carousel-caption">
+        chocolate
       </div>
-
-      <div class="slide">
-        <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <p>coffee</p>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="assets/spring2015_coffee.jpg" width="400px">
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="item">
+      <img src="assets/spring2015_coffee.jpg" alt="Coffee">
+      <div class="carousel-caption">
+        coffee
       </div>
-
-      <div class="slide">
-        <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <p>black sesame</p>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="assets/spring2015_sesame.jpg" width="400px">
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="item">
+      <img src="assets/spring2015_sesame.jpg" alt="Black sesame">
+      <div class="carousel-caption">
+        black sesame
       </div>
-
-      <div class="slide">
-        <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <p>lemon-orange</p>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="assets/spring2015_citrus.jpg" width="400px">
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="item">
+      <img src="assets/spring2015_citrus.jpg" alt="Citrus">
+      <div class="carousel-caption">
+        lemon orange
       </div>
-
-      <div class="slide">
-        <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <p>tbd</p>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="assets/spring2015_sesame.jpg" width="400px">
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="item">
+      <img src="assets/spring2015_box.jpg" alt="Packaging">
+      <div class="carousel-caption">
+        neatly packaged
       </div>
+    </div>
+  </div>
 
-      <div class="slide">
-        <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <p>tbd</p>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="assets/spring2015_sesame.jpg" width="400px">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <p>neatly packaged</p>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="assets/spring2015_box.jpg" width="400px">
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#collection-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#collection-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
-    <div class="slider-nav">
-      <a href="#" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-      <ul class="slider-dots">
-        <li class="dot active-dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-      </ul>
-      <a href="#" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-    </div>
-
 <p>
-	this 6-macarons collection is $15. preorder now & pick up @ Front Cafe [150 mississippi street, san francisco] starting friday, feb 6th through valentine's day!
+  this 6-macarons collection is $15. preorder now & pick up @ Front Cafe [150 mississippi street, san francisco] starting friday, feb 6th through valentine's day!
+</p>
+<p>
+  pickup from FRONT, choose pickup date
 </p>
 
 <p>
-	pickup from FRONT, choose pickup date
-</p>
-<p>
+  Full Name (required) <input id="fullName" name="fullName" value="">
+  Pickup date (required) 
+  <select id="pickupDate">
+    <option value="NotEntered" selected="selected">-- choose option --</option>
+    <option value="2015-02-06">Friday, February 6</option>
+    <option value="2015-02-07">Saturday, February 7</option>
+    <option value="2015-02-08">Saturday, February 8</option>
+    <option value="2015-02-09">Saturday, February 9</option>
+  </select>
+  Join mailing list? <input type="checkbox" id="mailingList" name="mailingList">
 
-    Full Name (required) <input id="fullName" name="fullName" value="">
-    Pickup date (required) 
-    <select id="pickupDate">
-      <option value="NotEntered" selected="selected">-- choose option --</option>
-      <option value="2015-02-06">Friday, February 6</option>
-      <option value="2015-02-07">Saturday, February 7</option>
-      <option value="2015-02-08">Saturday, February 8</option>
-      <option value="2015-02-09">Saturday, February 9</option>
-    </select>
-    Join mailing list? <input type="checkbox" id="mailingList" name="mailingList">
-
-<form action="https://melange-checkout.herokuapp.com/" method="POST">
+  <form action="https://melange-checkout.herokuapp.com/" method="POST">
     <script
         src="https://checkout.stripe.com/checkout.js"
         class="stripe-button"
@@ -163,5 +101,5 @@ title: current collection
     <input name="amount" value="1500" type="hidden">
     <input name="description" value="i (spring 2015): a taste of macarons" type="hidden">
     <input name="metadata" value="{}" type="hidden">
-</form>
+  </form>
 </p>

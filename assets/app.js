@@ -1,4 +1,6 @@
 var main = function() {
+
+  /*
   $('.dropdown-toggle').click(function() {
       $('.dropdown-menu').toggle();
   });
@@ -39,6 +41,7 @@ var main = function() {
       currentDot.removeClass('active-dot');
       prevDot.addClass('active-dot');
   });
+  */
 
   // disable stripe button
   var button = $('.stripe-button-el');

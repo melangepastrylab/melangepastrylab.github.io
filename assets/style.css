@@ -1,2 +1,5 @@
 
 /* add custom css here */
+.bodyRow {
+  max-width: 740px;
+}

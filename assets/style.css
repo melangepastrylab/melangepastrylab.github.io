@@ -4,10 +4,10 @@
   max-width: 740px;
 }
 
-.orderInput {
-  margin-bottom: 10px;
+body {
+  font-size: 18px;
 }
 
-p {
-  margin: 5px 0;
+.container {
+  margin-bottom: 75px
 }

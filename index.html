@@ -70,49 +70,38 @@ title: current collection
 <p>
   this 6-macarons collection is $15. preorder now & pick up @ Front Cafe [150 mississippi street, san francisco] starting friday, feb 6th through valentine's day!
 </p>
-<p>
-  pickup from FRONT, choose pickup date
-</p>
-
-<p>
-  <div class="panel panel-default">
-    <div class="panel-body">
-  <!-- input group style -->
-  <!--
-  <div class="input-group input-group-lg">
-    <span class="input-group-addon" id="sizing-addon1">Full Name (required)</span>
-    <input id="fullName" type="text" class="form-control">
-  </div>
-  -->
-      <input id="fullName" class="orderInput" name="fullName" value="" placeholder="Full Name">
-      <br/>
-      <select id="pickupDate" class="orderInput">
-        <option value="NotEntered" selected="selected">-- pickup date --</option>
-        <option value="2015-02-06">Friday, February 6</option>
-        <option value="2015-02-07">Saturday, February 7</option>
-        <option value="2015-02-08">Saturday, February 8</option>
-        <option value="2015-02-09">Saturday, February 9</option>
-      </select>
-      <br/>
-      <div class="orderInput">Join mailing list? <input type="checkbox" id="mailingList" name="mailingList"></div>
-
-      <form action="https://melange-checkout.herokuapp.com/" method="POST">
-        <script
-            src="https://checkout.stripe.com/checkout.js"
-            class="stripe-button"
-            data-key="pk_test_q8NAb1ewbs64MPgELxVLCC1K"
-            data-name="melange pastry lab"
-            data-image="/assets/melange_logo_small.png"
-            data-description="i (spring 2015): a taste of macarons"
-            data-amount="1500"
-        ></script>
-        <input name="amount" value="1500" type="hidden">
-        <input name="description" value="i (spring 2015): a taste of macarons" type="hidden">
-        <input name="metadata" value="{}" type="hidden">
-      </form>
-    </div> <!-- panel-body -->
-  </div> <!-- panel -->
-</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>Please enter your full name and choose a pickup date.</p>
+    <p><input id="fullName" name="fullName" value="" placeholder="Full Name"></p>
+    <p><select id="pickupDate">
+      <option value="NotEntered" selected="selected">Choose Pickup Date</option>
+      <option value="2015-02-06">Friday, February 6</option>
+      <option value="2015-02-07">Saturday, February 7</option>
+      <option value="2015-02-08">Saturday, February 8</option>
+      <option value="2015-02-10">Sunday, February 10</option>
+      <option value="2015-02-11">Monday, February 11</option>
+      <option value="2015-02-12">Tuesday, February 12</option>
+      <option value="2015-02-13">Wednesday, February 13</option>
+      <option value="2015-02-14">Thursday, February 14</option>
+    </select></p>
+    <p><div>Join mailing list? <input type="checkbox" id="mailingList" name="mailingList"></div></p>
+    <form action="https://melange-checkout.herokuapp.com/" method="POST">
+      <script
+          src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="pk_test_q8NAb1ewbs64MPgELxVLCC1K"
+          data-name="melange pastry lab"
+          data-image="/assets/melange_logo_small.png"
+          data-description="i (spring 2015): a taste of macarons"
+          data-amount="1500"
+      ></script>
+      <input name="amount" value="1500" type="hidden">
+      <input name="description" value="i (spring 2015): a taste of macarons" type="hidden">
+      <input name="metadata" value="{}" type="hidden">
+    </form>
+  </div> <!-- panel-body -->
+</div> <!-- panel -->
 </div> <!-- col -->
 </div> <!-- row -->
 

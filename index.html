@@ -107,13 +107,6 @@ title: current collection
       <option value="2015-02-13">Wednesday, February 13</option>
       <option value="2015-02-14">Thursday, February 14</option>
     </select></p>
-    <p><select id="quantity">
-        <option value="1" selected="selected">1 box</option>
-        <option value="2">2 boxes</option>
-        <option value="3">3 boxes</option>
-        <option value="4">4 boxes</option>
-        <option value="5">5 boxes</option>
-    </select></p>
     <p><div>join mailing list? <input type="checkbox" id="mailingList" name="mailingList"></div></p>
     <form action="https://melange-checkout.herokuapp.com/" method="POST">
       <script
@@ -126,7 +119,6 @@ title: current collection
           data-description="i (spring 2015): a taste of macarons"
           data-amount="1500"
       ></script>
-      <input name="amount" id="amount" value="1500" type="hidden">
       <input name="description" value="i (spring 2015): a taste of macarons" type="hidden">
       <input name="metadata" value="{}" type="hidden">
     </form>

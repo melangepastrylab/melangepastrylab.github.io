@@ -39,7 +39,6 @@ var main = function() {
     updateMetadata();
   }
 
-
   $('#fullName').keyup(updateMetadata);
   $('#pickupDate').change(updateMetadata);
   $('#mailingList').change(updateMetadata);

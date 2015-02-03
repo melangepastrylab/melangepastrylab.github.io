@@ -2,12 +2,16 @@
 /* add custom css here */
 .bodyRow {
   max-width: 640px;
+  margin: 0 auto;
 }
 
 body {
   font-size: 18px;
+  background-image: url("background.png");
 }
 
 .container {
-  margin-bottom: 75px
+  margin-bottom: 100px;
+  max-width: 920px;
+  background: white;
 }

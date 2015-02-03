@@ -21,7 +21,7 @@ var main = function() {
       $('input[name=metadata]').val(stringified);
 
       // re-enable submit button
-      $('.stripe-button-el').prop('disabled', false);
+      // (temp disabled) $('.stripe-button-el').prop('disabled', false);
     } else if (metadata.fullName.length === 0
         || metadata.pickupDate === "NotEntered") {
       // disable submit button

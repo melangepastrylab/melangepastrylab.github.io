@@ -39,32 +39,6 @@ var main = function() {
     updateMetadata();
   }
 
-  var handler = StripeCheckout.configure({
-    key: 'pk_test_q8NAb1ewbs64MPgELxVLCC1K',
-    image: 'assets/melange_logo_small.png',
-    token: function(token) {
-      // Use the token to create the charge with a server-side script.
-      // You can access the token ID with `token.id`
-    }
-  });
-
-  $('#customButton').on('click', function(e) {
-    var amount = $('#amount').val();
-
-    // Open Checkout with further options
-    handler.open({
-      name: 'melange pastry lab',
-      description: 'i (spring 2015): a taste of macarons',
-      amount: amount
-    });
-    e.preventDefault();
-  });
-
-  // Close Checkout on page navigation
-  $(window).on('popstate', function() {
-    handler.close();
-  });
-
   $('#fullName').keyup(updateMetadata);
   $('#pickupDate').change(updateMetadata);
   $('#mailingList').change(updateMetadata);

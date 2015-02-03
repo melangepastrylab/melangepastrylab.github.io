@@ -55,6 +55,7 @@ var main = function() {
     metadata.fullName = $.trim($('#fullName').val());
     metadata.pickupDate = $('#pickupDate').val();
     metadata.mailingList = $('#mailingList').prop('checked');
+    metadata.quantity = $('#quantity').val();
 
     if (metadata.fullName.length > 0
        && metadata.pickupDate !== "NotEntered") {
@@ -72,9 +73,20 @@ var main = function() {
     }
   }
 
+  var updateQuantity = function() {
+    /* update price based on quantity */
+    var boxes = $('#quantity').val();
+    var amount = 1500 * boxes;
+    $('#stripeScript').attr('data-amount', amount);
+    $('#amount').val(amount);
+    updateMetadata();
+  }
+
+
   $('#fullName').keyup(updateMetadata);
   $('#pickupDate').change(updateMetadata);
   $('#mailingList').change(updateMetadata);
+  $('#quantity').change(updateQuantity);
 
 };
 

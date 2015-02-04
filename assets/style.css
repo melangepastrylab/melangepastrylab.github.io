@@ -7,13 +7,13 @@
 
 body {
   font-family: 'Oswald', sans-serif;
-  font-size: 20px;
+  font-size: 2em;
   font-stretch: expanded;
   color: #6E6E6E;
   letter-spacing: 1px;
   background-image: url("background.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .container {
@@ -24,17 +24,21 @@ body {
 
 .carousel-caption {
   font-family: 'Oswald', sans-serif;
-  font-size: 40px;
+  font-size: 1.5em;
   letter-spacing: 1px;
   font-stretch: expanded;
 }
 
 h1 {
 	text-align: center;
-	font-size: 80px;
+	font-size: 4em;
 	color: #BDBDBD;
 }
 
 .footer {
 	text-align: center;
+}
+
+.mailing-list {
+	color: #FAD102;
 }

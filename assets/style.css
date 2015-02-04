@@ -10,9 +10,22 @@ body {
   font-size: 2em;
   font-stretch: expanded;
   color: #6E6E6E;
-  letter-spacing: 1px;
   background-image: url("background.png");
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dropdown {
+  font-family: 'Oswald', sans-serif;
+  font-stretch: expanded;
+  color: #6E6E6E;
+  background-size: cover;
+}
+
+.fullname {
+  font-family: 'Oswald', sans-serif;
+  font-stretch: expanded;
+  color: #FAD102;
   background-size: cover;
 }
 
@@ -25,7 +38,6 @@ body {
 .carousel-caption {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5em;
-  letter-spacing: 1px;
   font-stretch: expanded;
 }
 
@@ -39,6 +51,6 @@ h1 {
 	text-align: center;
 }
 
-.mailing-list {
+.yellow {
 	color: #FAD102;
 }

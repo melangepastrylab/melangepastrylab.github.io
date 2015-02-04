@@ -102,28 +102,31 @@ title: current collection
 
 <br/>
 <p>
-  this 6-macarons collection is $15 <br/><br/>
-  preorder now & pick up @ Front Cafe during cafe hours<br>
-  [150 mississippi street, san francisco]<br/><br/>
-  pickups available starting friday, feb 6th through valentine's day!<br/><br/>
+  this 6-macarons collection is $15
+</p>
+<p>
+  preorder now & pick up @ Front Cafe during cafe hours<br/>
+  <span class="yellow">[150 mississippi street, san francisco]</span>
+</p>
+<p>
+  pickups available starting saturday, feb 7th through valentine's day!<br/><br/>
 </p>
 <div class="panel panel-default">
   <div class="panel-body">
     <p>please enter your full name and choose a pickup date</p>
-    <p><input id="fullName" name="fullName" value="" placeholder="Full Name"></p>
-    <p><select id="pickupDate">
+    <p><input id="fullName" name="fullName" value="" placeholder="enter full name" class="fullname"></p>
+    <p><select id="pickupDate" class="dropdown">
       <option value="NotEntered" selected="selected">choose pickup date</option>
-      <option value="2015-02-06">Friday, February 6</option>
-      <option value="2015-02-07">Saturday, February 7</option>
-      <option value="2015-02-08">Sunday, February 8</option>
-      <option value="2015-02-10">Monday, February 9</option>
-      <option value="2015-02-11">Tuesday, February 10</option>
-      <option value="2015-02-12">Wednesday, February 11</option>
-      <option value="2015-02-13">Thursday, February 12</option>
-      <option value="2015-02-14">Friday, February 13</option>
-      <option value="2015-02-14">Saturday, February 14</option>
+      <option value="2015-02-07">saturday, february 7</option>
+      <option value="2015-02-08">sunday, february 8</option>
+      <option value="2015-02-10">monday, february 9</option>
+      <option value="2015-02-11">tuesday, february 10</option>
+      <option value="2015-02-12">wednesday, february 11</option>
+      <option value="2015-02-13">thursday, february 12</option>
+      <option value="2015-02-14">friday, february 13</option>
+      <option value="2015-02-14">saturday, february 14</option>
     </select></p>
-    <p><div class="mailing-list">join the mailing list to stay in touch? <input type="checkbox" id="mailingList" name="mailingList"></div></p>
+    <p><div class="yellow">join the mailing list to stay in touch? <input type="checkbox" id="mailingList" name="mailingList"></div></p>
     <form action="https://melange-checkout.herokuapp.com/" method="POST">
       <script
           src="https://checkout.stripe.com/checkout.js"

@@ -87,9 +87,6 @@ var main = function() {
         location.href = 'error.html';
       },
     });
-
-    // if we get here, all is good... redirect.
-    location.href = '/success.html';
   };
 
 

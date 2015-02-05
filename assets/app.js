@@ -88,9 +88,9 @@ var main = function() {
         debugger;
       },
     });
+        location.href = '/success.html';
   };
   // redirect in success
-        location.href = '/success.html';
 
 
     // get args off of page

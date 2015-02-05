@@ -59,15 +59,17 @@ var main = function() {
 
     var metadata = getMetadata();
 
-    var data = {
+    var payload = {
       amount: getAmountCents(),
       description: 'i (spring 2015): a taste of macarons',
-     /* metadata: getMetadata(),*/
+      metadata: metadata,
       stripeToken: token.id,
       stripeTokenType: token.type,
-      stripeEmail: token.email,
-      fullName: metadata.fullName,
-      pickupDate: metadata.pickupDate
+      stripeEmail: token.email
+    }
+
+    var data = {
+      payload: payload
     }
 
     debugger;
@@ -75,16 +77,17 @@ var main = function() {
     // send to herokuapp
     $.ajax({
       type: 'POST',
-      url: 'https://melange-checkout.herokuapp.com/',
+      url: 'https://test-melange-checkout.herokuapp.com/',
       crossDomain: true,
-      data: JSON.stringify(data),
-      contentType: 'application/json',
+      data: payload,
+      // contentType: 'application/json',
       dataType: 'json',
-      success: function(data) {
+      success: function(msg) {
         //location.href = '/success.html';
       },
-      error: function(data) {
-        alert('failed:' + data);
+      error: function(msg) {
+        debugger;
+        alert('failed:' + JSON.stringify(data));
         //location.href = 'error.html';
       },
     });

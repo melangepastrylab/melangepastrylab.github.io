@@ -72,8 +72,6 @@ var main = function() {
       payload: payload
     }
 
-    debugger;
-
     // send to herokuapp
     $.ajax({
       type: 'POST',
@@ -83,14 +81,15 @@ var main = function() {
       // contentType: 'application/json',
       dataType: 'json',
       success: function(msg) {
-        //location.href = '/success.html';
+        location.href = '/success.html';
       },
       error: function(msg) {
-        debugger;
-        alert('failed:' + JSON.stringify(data));
-        //location.href = 'error.html';
+        location.href = 'error.html';
       },
     });
+
+    // if we get here, all is good... redirect.
+    location.href = '/success.html';
   };
 
 

@@ -84,6 +84,8 @@ var main = function() {
         location.href = '/success.html';
       },
       error: function(msg) {
+        alert('failed': msg);
+        debugger;
         location.href = 'error.html';
       },
     });

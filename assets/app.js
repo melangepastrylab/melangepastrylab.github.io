@@ -81,15 +81,16 @@ var main = function() {
       // contentType: 'application/json',
       dataType: 'json',
       success: function(msg) {
-        location.href = '/success.html';
+        alsert('success!');
       },
       error: function(msg) {
         alert('failed:' + msg);
         debugger;
-        location.href = 'error.html';
       },
     });
   };
+  // redirect in success
+        location.href = '/success.html';
 
 
     // get args off of page

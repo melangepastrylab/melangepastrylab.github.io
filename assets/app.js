@@ -79,11 +79,11 @@ var main = function() {
       dataType: 'json',
       success: function(data) {
         console.log(data);
-        location.href = '/success.html';
+        //location.href = '/success.html';
       },
       error: function(data) {
         console.log(data);
-        location.href = 'error.html';
+        //location.href = 'error.html';
       },
     });
   };

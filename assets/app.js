@@ -70,19 +70,21 @@ var main = function() {
       pickupDate: metadata.pickupDate
     }
 
+    debugger;
+
     // send to herokuapp
     $.ajax({
       type: 'POST',
       url: 'https://melange-checkout.herokuapp.com/',
+      crossDomain: true,
       data: JSON.stringify(data),
       contentType: 'application/json',
       dataType: 'json',
       success: function(data) {
-        console.log(data);
         //location.href = '/success.html';
       },
       error: function(data) {
-        console.log(data);
+        alert('failed:' + data);
         //location.href = 'error.html';
       },
     });

@@ -105,7 +105,8 @@ var main = function() {
     */
 
     var stripeHandler = StripeCheckout.configure({
-      key: 'pk_live_lUrKXKuFxSYeqGbtqsjnytWd',
+      // key: 'pk_live_lUrKXKuFxSYeqGbtqsjnytWd',
+      key: 'pk_test_q8NAb1ewbs64MPgELxVLCC1K',
       image: '/assets/melange_logo_small.png',
       token: function(token, args) {
         onTokenRecv(token, args);

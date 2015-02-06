@@ -80,11 +80,11 @@ var main = function() {
       data: payload,
       // contentType: 'application/json',
       dataType: 'json',
-      success: function(msg) {
+      success: function(data, textStatus, jqXHR) {
         alsert('success!');
       },
-      error: function(msg) {
-        alert('failed:' + msg);
+      error: function(jqXHR, textStatus, errorThrown) {
+        alert('failed');
         debugger;
       },
     });

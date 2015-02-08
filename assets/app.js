@@ -11,6 +11,7 @@ var main = function() {
     metadata.fullName = $.trim($('#fullName').val());
     metadata.pickupDate = $('#pickupDate').val();
     metadata.mailingList = $('#mailingList').prop('checked');
+    metadata.quantity = $('#quantity').val();
     return metadata;
   }
 

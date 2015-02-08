@@ -22,12 +22,6 @@ var main = function() {
     if (metadata.fullName.length > 0
        && metadata.pickupDate !== "NotEntered") {
 
-      // set metadata
-         /*
-      var stringified = JSON.stringify(metadata);
-      $('input[name=metadata]').val(stringified);
-      */
-
       // re-enable submit button
       $('#customButton').prop('disabled', false);
     } else if (metadata.fullName.length === 0
@@ -54,7 +48,7 @@ var main = function() {
   var onTokenRecv = function(token) {
 
     /* token
-     * Object {id: "tok_15ShfjE9X8U61k3SjXKMqDfv", livemode: true, created: 1423112123, used: false, object: "token"…}card: Objectclient_ip: "107.192.0.177"created: 1423112123email: "mericsson@gmail.com"id: "tok_15ShfjE9X8U61k3SjXKMqDfv"livemode: trueobject: "token"type: "card"used: falseverification_allowed: true}
+     * Object {id: "tok_123456123456123456123456", livemode: true, created: 1423112123, used: false, object: "token"…}card: Objectclient_ip: "107.192.0.177"created: 1423112123email: "mericsson@gmail.com"id: "tok_123456123456123456KMqDfv"livemode: trueobject: "token"type: "card"used: falseverification_allowed: true}
      */
 
     var metadata = getMetadata();
@@ -78,30 +72,15 @@ var main = function() {
       url: 'https://test-melange-checkout.herokuapp.com/',
       crossDomain: true,
       data: payload,
-      // contentType: 'application/json',
       dataType: 'json',
       success: function(data, textStatus, jqXHR) {
-        alsert('success!');
+        window.location.replace('/success.html');
       },
       error: function(jqXHR, textStatus, errorThrown) {
-        alert('failed');
-        debugger;
+        window.location.replace('/error.html');
       },
     });
-        location.href = '/success.html';
   };
-  // redirect in success
-
-
-    // get args off of page
-    /*
-    var fullName = $.trim($('#fullName').val());
-    var pickupDate = $('#pickupDate').val();
-    var mailingList = $('#mailingList').prop('checked');
-    var quantity = $('#quantity').val();
-    var amount = quantity * 1500; // cents
-    var key = 'pk_live_lUrKXKuFxSYeqGbtqsjnytWd';
-    */
 
     var stripeHandler = StripeCheckout.configure({
       // key: 'pk_live_lUrKXKuFxSYeqGbtqsjnytWd',

@@ -24,7 +24,7 @@ var main = function() {
        && metadata.pickupDate !== "NotEntered") {
 
       // re-enable submit button
-      $('#customButton').prop('disabled', false);
+      //$('#customButton').prop('disabled', false);
     } else if (metadata.fullName.length === 0
         || metadata.pickupDate === "NotEntered") {
       // disable submit button

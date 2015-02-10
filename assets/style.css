@@ -58,3 +58,23 @@ h1 {
 .yellow {
 	color: #FAD102;
 }
+
+.overlay {
+	position: fixed;
+	z-index: 15;
+	opacity: 0.85;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: White;
+}
+
+.overlayText {
+	color: #6E6E6E;
+	text-align: center;
+	font-size: 1.5em;
+	z-index: 20;
+}

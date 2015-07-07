@@ -36,9 +36,17 @@ var main = function() {
     return $('#quantity').val();
   }
 
+  var getDeliveryFee = function() {
+    if ($('#deliverType').val() === 'delivery') {
+      return 500; // in cents
+    } else {
+      return 0;
+    }
+  }
+
   var getAmountCents = function() {
     var quantity = getQuantity();
-    var amount = quantity * 1500; // cents
+    var amount = quantity * 1500 + getDeliveryFee(); // cents
     return amount;
   }
 
@@ -100,13 +108,24 @@ var main = function() {
       });
     }
 
+    var updateDelivery = function() {
+      var pickupSection = $('#pickupSection')[0];
+      var deliverySection = $('#deliverySection')[0];
+      if ($('#deliverType').val() === 'delivery') {
+        deliverySection.classList.remove('hidden');
+        pickupSection.classList.add('hidden');
+      } else {
+        pickupSection.classList.remove('hidden');
+        deliverySection.classList.add('hidden');
+      }
+    }
 
   /* bindings */
   $('#fullName').keyup(updateMetadata);
   $('#pickupDate').change(updateMetadata);
   $('#mailingList').change(updateMetadata);
   $('#customButton').on('click', openStripeHandler);
-
-};
+  $('#deliverType').change(updateDelivery);
+}
 
 $(document).ready(main);

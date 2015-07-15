@@ -119,7 +119,7 @@ var main = function() {
     var openStripeHandler = function() {
       stripeHandler.open({
         name: 'melange pastry lab',
-        description: 'i (spring 2015): a taste of macarons',
+        description: 'summer: tea+fruit financiers',
         amount: getAmountCents()
       });
     }

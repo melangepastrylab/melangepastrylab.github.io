@@ -127,53 +127,49 @@ title: current collection
 </div>
 <div class="panel panel-default">
   <div class="panel-body">
+    <input id="fullName" name="fullName" value="" placeholder="full name" class="formField pink">
+    <input id="email" name="email" value="" placeholder="email" class="formField pink">
     <div id="pickupSection">
      <p>pickup is available at <a class="pink" href="https://www.facebook.com/samspatisserie" target="_blank">Sam's Patisserie</a> in Berkeley</p>
      <form>
-      <input id="fullName" name="fullName" value="" placeholder="full name" class="formField pink">
-      <input id="email" name="email" value="" placeholder="email" class="formField pink">
-      <br/><br/>
       <p><select id="pickupDate" class="dropdown">
         <option value="NotEntered" selected="selected">choose pickup date</option>
         <option value="2015-07-19">sunday, july 19</option>
         <option value="2015-07-26">sunday, july 26</option>
       </select></p>
-      <p><select id="quantity" class="dropdown">
-        <option value="1" selected="selected">1 box</option>
-        <option value="2">2 boxes</option>
-        <option value="3">3 boxes</option>
-      </select></p>
      </form>
     </div>
     <div id="deliverySection" class="hidden">
       <p>please enter your full name and choose a pickup date</p      >
-      <p>delivery by <a class="pink" href="https://gorickshaw.com">Rickshaw</a>. additional $5 delivery fee applies*</p>
+      <p>delivery by <a class="pink" href="https://gorickshaw.com" target="_blank">Rickshaw</a>. additional $5 delivery fee applies*</p>
       <form>
-      <input id="fullName" name="fullName" value="" placeholder="full name" class="formField pink">
-      <input id="email" name="email" value="" placeholder="email" class="formField pink">
-      <br><br>
       <input id="address" name="address" value="" placeholder="address" class="formField pink">
       <input id="zipcode" name="zipcode" value="" placeholder="zipcode" class="formField pink">
+      <input id="phone" name="phone" value="" placeholder="phone number" class="formField pink">
       <br/><br/>
-      <p><select id="pickupDate" class="dropdown">
-        <option value="NotEntered" selected="selected">choose pickup date</option>
+      <p><select id="deliveryDate" class="dropdown">
+        <option value="NotEntered" selected="selected">choose delivery date</option>
         <option value="2015-07-20">monday, july 20</option>
         <option value="2015-07-21">tuesday, july 21</option>
         <option value="2015-07-22">wednesday, july 22</option>
         <option value="2015-07-23">thursday, july 23</option>
         <option value="2015-07-24">friday, july 24</option>
       </select></p>
-      <p><select id="quantity" class="dropdown">
-        <option value="1" selected="selected">1 box</option>
-        <option value="2">2 boxes</option>
-        <option value="3">3 boxes</option>
-      </select></p>
       </form>
       <p class="addendum">delivery is only available for the city of <span class="pink">san francisco</span>, daily delivery window is 8:30am to 2:30pm</p>
     </div>
+    <p><select id="quantity" class="dropdown">
+        <option value="1" selected="selected">1 box</option>
+        <option value="2">2 boxes</option>
+        <option value="3">3 boxes</option>
+    </select></p>
     <p><div class="pink">join the mailing list to stay in touch? <input type="checkbox" id="mailingList" name="mailingList"></div></p>
-    <button id="customButton" disabled="true">purchase</button>
-    <br/><br/>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>total: $<span id="totalCost">15</span></p>
+        <button id="customButton" disabled>purchase</button>
+      </div>
+    </div>
     <div class="disclaimer">-- this product is not suitable for people with food allergies --</div>
   </div> <!-- panel-body -->
 </div> <!-- panel -->

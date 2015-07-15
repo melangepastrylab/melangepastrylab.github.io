@@ -9,9 +9,15 @@ var main = function() {
   var getMetadata = function() {
     var metadata = {};
     metadata.fullName = $.trim($('#fullName').val());
+    metadata.email = $.trim($('#email').val());
+    metadata.phone = $.trim($('#phone').val());
+    metadata.address = $.trim($('#address').val());
+    metadata.zipcode = $.trim($('#zipcode').val());
     metadata.pickupDate = $('#pickupDate').val();
+    metadata.deliveryDate = $('#deliveryDate').val();
     metadata.mailingList = $('#mailingList').prop('checked');
     metadata.quantity = $('#quantity').val();
+    metadata.deliveryType = $('#deliverType').val();
     return metadata;
   }
 
@@ -20,15 +26,24 @@ var main = function() {
   var updateMetadata = function() {
     var metadata = getMetadata();
 
-    if (metadata.fullName.length > 0
-       && metadata.pickupDate !== "NotEntered") {
-
-      // re-enable submit button
-      //$('#customButton').prop('disabled', false);
-    } else if (metadata.fullName.length === 0
-        || metadata.pickupDate === "NotEntered") {
+    if ($('#deliverType').val() === 'delivery'
+        && (metadata.fullName.length === 0
+          || metadata.email.length === 0
+          || metadata.phone.length === 0
+          || metadata.address.length === 0
+          || metadata.zipcode.length === 0
+          || metadata.deliveryDate === "NotEntered")) {
       // disable submit button
       $('#customButton').prop('disabled', true);
+    } else if ($('#deliverType').val() === 'pickup'
+        && (metadata.fullName.length === 0
+          || metadata.email.length === 0
+          || metadata.pickupDate === "NotEntered")) {
+      // disable submit button
+      $('#customButton').prop('disabled', true);
+    } else {
+      // enable submit button
+      $('#customButton').prop('disabled', false);
     }
   }
 
@@ -45,6 +60,7 @@ var main = function() {
   }
 
   var getAmountCents = function() {
+    debugger;
     var quantity = getQuantity();
     var amount = quantity * 1500 + getDeliveryFee(); // cents
     return amount;
@@ -64,7 +80,7 @@ var main = function() {
 
     var payload = {
       amount: getAmountCents(),
-      description: 'i (spring 2015): a taste of macarons',
+      description: 'summer: tea+fruit financiers',
       metadata: metadata,
       stripeToken: token.id,
       stripeTokenType: token.type,
@@ -118,14 +134,28 @@ var main = function() {
         pickupSection.classList.remove('hidden');
         deliverySection.classList.add('hidden');
       }
+      /*update total cost*/
+      updateTotalCost();
+    }
+
+    var updateTotalCost = function() {
+      var cents = getAmountCents();
+      var dollars = cents / 100;
+      $('#totalCost').text(dollars);
     }
 
   /* bindings */
   $('#fullName').keyup(updateMetadata);
+  $('#email').keyup(updateMetadata);
+  $('#phone').keyup(updateMetadata);
+  $('#address').keyup(updateMetadata);
+  $('#zipcode').keyup(updateMetadata);
   $('#pickupDate').change(updateMetadata);
+  $('#deliveryDate').change(updateMetadata);
   $('#mailingList').change(updateMetadata);
-  $('#customButton').on('click', openStripeHandler);
   $('#deliverType').change(updateDelivery);
+  $('#quantity').change(updateTotalCost);
+  $('#customButton').on('click', openStripeHandler);
 }
 
 $(document).ready(main);

@@ -53,7 +53,7 @@ var main = function() {
 
   var getDeliveryFee = function() {
     if ($('#deliverType').val() === 'delivery') {
-      return 500; // in cents
+      return 600; // in cents
     } else {
       return 0;
     }

@@ -25,7 +25,6 @@ body {
 .fullname {
   font-family: 'Oswald', sans-serif;
   font-stretch: expanded;
-  color: #FAD102;
   background-size: cover;
 }
 
@@ -57,10 +56,6 @@ h1 {
 	text-align: center;
 }
 
-.yellow {
-	color: #FAD102;
-}
-
 .overlay {
 	position: fixed;
 	z-index: 6;
@@ -83,4 +78,26 @@ h1 {
 
 .carousel-indicators {
 	z-index: 5;
+}
+
+.addendum {
+  font-size: .7em;
+}
+
+#customButton[disabled] {
+  color: #BDBDBD;
+  background-color: #6E6E6E;
+}
+
+/* ---colors--- */
+.yellow {
+  color: #FAD102;
+}
+
+.grey {
+  color: #BDBDBD;
+}
+
+.pink {
+  color: #FE2E64;
 }

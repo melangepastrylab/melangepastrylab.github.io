@@ -133,16 +133,16 @@ title: current collection
   <div class="panel-body">
     <input id="fullName" name="fullName" value="" placeholder="full name" class="formField pink">
     <input id="email" name="email" value="" placeholder="email" class="formField pink">
-    <div id="pickupSection">
+    <div id="pickupSection" class="hidden">
      <p>pickup is available at <a class="pink" href="https://www.facebook.com/samspatisserie" target="_blank">Sam's Patisserie</a> in Berkeley*</p>
      <form>
       <p><select id="pickupDate" class="dropdown">
-        <option value="NotEntered" selected="selected">sold out!</option>
+        <option value="NotEntered" selected="selected">pickup is soldout! please select delivery.</option>
       </select></p>
      </form>
      <p class="addendum">*Sam's Patisserie is open on Sundays between 3:30pm - 7pm @ the <a class="pink" href="http://www.westbraebiergarten.com/" target="_blank">Westbrae Biergarten</a></p>
     </div>
-    <div id="deliverySection" class="hidden">
+    <div id="deliverySection">
       <p>please enter your full name and choose a pickup date</p      >
       <p>additional $6 delivery fee applies*</p>
       <form>

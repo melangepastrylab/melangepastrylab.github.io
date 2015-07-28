@@ -43,7 +43,8 @@ var main = function() {
       $('#customButton').prop('disabled', true);
     } else {
       // enable submit button
-      $('#customButton').prop('disabled', false);
+      // NO SUBMIT BUTTON DISABLED!
+      // $('#customButton').prop('disabled', false);
     }
   }
 
